@@ -9,7 +9,7 @@
 // marcadas abajo. Mientras estén vacíos, no se carga ningún script.
 // ==================================================================
 
-const GA_MEASUREMENT_ID = ''; // ej: 'G-XXXXXXXXXX'
+const GA_MEASUREMENT_ID = 'G-DFGBLBQ8GG'; // Pies Hinchados Teatro - GA4
 const META_PIXEL_ID = '';     // ej: '1234567890123456'
 
 if (GA_MEASUREMENT_ID) {
