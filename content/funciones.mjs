@@ -25,6 +25,70 @@ export const funciones = [
       especial</a>.</p>`,
   },
   {
+    slug: 'armadillos-colima-octubre-2026',
+    obraSlug: 'armadillos',
+    fechaInicio: '2026-10-10',
+    fechaFin: '2026-10-11',
+    horario: 'Sábado 7:00 pm · domingo 6:00 pm',
+    lugar: 'Casa Caracol',
+    ciudad: 'Colima',
+    estado: 'Colima',
+    boletosUrl: '',
+    gratuita: false,
+    resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el sábado 10 de
+      octubre (7:00 pm) y el domingo 11 de octubre (6:00 pm) de 2026, en Casa Caracol.</p>
+      <p>Esta gira forma parte del <a href="/blog/circuito-nacional-artes-escenicas-espacios-independientes-2026/">Circuito
+      Nacional de Artes Escénicas en Espacios Independientes 2026</a>.</p>`,
+  },
+  {
+    slug: 'armadillos-morelia-octubre-2026',
+    obraSlug: 'armadillos',
+    fechaInicio: '2026-10-18',
+    fechaFin: '',
+    horario: '1:00 pm y 6:00 pm',
+    lugar: 'La Ceiba',
+    ciudad: 'Morelia',
+    estado: 'Michoacán',
+    boletosUrl: '',
+    gratuita: false,
+    resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el domingo 18 de
+      octubre de 2026, a la 1:00 pm y a las 6:00 pm, en La Ceiba.</p>
+      <p>Esta gira forma parte del <a href="/blog/circuito-nacional-artes-escenicas-espacios-independientes-2026/">Circuito
+      Nacional de Artes Escénicas en Espacios Independientes 2026</a>.</p>`,
+  },
+  {
+    slug: 'armadillos-leon-diciembre-2026',
+    obraSlug: 'armadillos',
+    fechaInicio: '2026-12-07',
+    fechaFin: '2026-12-08',
+    horario: '7:00 pm',
+    lugar: 'Espacio Colaborativo',
+    ciudad: 'León',
+    estado: 'Guanajuato',
+    boletosUrl: '',
+    gratuita: false,
+    resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el lunes 7 y
+      martes 8 de diciembre de 2026, a las 7:00 pm, en Espacio Colaborativo.</p>
+      <p>Esta gira forma parte del <a href="/blog/circuito-nacional-artes-escenicas-espacios-independientes-2026/">Circuito
+      Nacional de Artes Escénicas en Espacios Independientes 2026</a>.</p>`,
+  },
+  {
+    slug: 'armadillos-puerto-vallarta-diciembre-2026',
+    obraSlug: 'armadillos',
+    fechaInicio: '2026-12-11',
+    fechaFin: '2026-12-12',
+    horario: '6:00 pm',
+    lugar: 'Plataforma 322',
+    ciudad: 'Puerto Vallarta',
+    estado: 'Jalisco',
+    boletosUrl: '',
+    gratuita: false,
+    resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el viernes 11 y
+      sábado 12 de diciembre de 2026, a las 6:00 pm, en Plataforma 322.</p>
+      <p>Esta gira forma parte del <a href="/blog/circuito-nacional-artes-escenicas-espacios-independientes-2026/">Circuito
+      Nacional de Artes Escénicas en Espacios Independientes 2026</a>.</p>`,
+  },
+  {
     slug: 'tina-y-tomas-noviembre-2026',
     obraSlug: 'tina-y-tomas',
     fechaInicio: '2026-11-01',
