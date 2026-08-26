@@ -63,11 +63,11 @@ export const blog = [
     resumen: 'Actualizamos nuestro sitio para que escuelas, festivales culturales y municipios encuentren más fácil nuestro repertorio y nos contacten para llevar teatro a sus espacios.',
     metaDescripcion: 'Colectivo Pies Hinchados estrena página web nueva, pensada para escuelas, festivales culturales y municipios que buscan contratar teatro en Guadalajara y Jalisco.',
     contenidoHtml: `
-      <p>Este es un artículo de ejemplo. Úsalo para anunciar convocatorias ganadas, temporadas
-      nuevas o notas de prensa — publicar con cierta regularidad ayuda a que Google encuentre
-      contenido fresco en tu sitio.</p>
-      <p><strong>Nota para Luis:</strong> reemplaza este texto o bórralo cuando publiques tu
-      primera entrada real.</p>
+      <p>Estrenamos página web nueva, pensada para que escuelas, festivales culturales y
+      municipios encuentren más fácil nuestro repertorio, revisen fechas disponibles y nos
+      contacten directamente para llevar teatro de impacto social a sus espacios.</p>
+      <p>Aquí iremos publicando las novedades del colectivo: convocatorias ganadas, temporadas
+      nuevas y giras por distintas ciudades del país.</p>
     `,
   },
 ];
