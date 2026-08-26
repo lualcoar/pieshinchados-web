@@ -12,7 +12,7 @@ import { fileURLToPath } from 'node:url';
 import { repertorio } from './content/repertorio.mjs';
 import { funciones } from './content/funciones.mjs';
 import { blog } from './content/blog.mjs';
-import { layout, SITE_URL, fechaLarga } from './lib/templates.mjs';
+import { layout, SITE_URL, fechaLarga, iconMascara, iconBoleto, iconDestello, heroFootlights, heroCurtain, heroMaskWatermark } from './lib/templates.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DIST = join(__dirname, 'dist');
@@ -106,12 +106,14 @@ function paginaInicio() {
         <a class="btn btn-outline" href="/escuelas-festivales-municipios/">Quiero contratar una función</a>
       </div>
     </div>
+    ${heroMaskWatermark()}
+    ${heroCurtain()}
   </section>
 
   <section class="tinted">
     <div class="wrap">
       <div class="section-head">
-        <p class="eyebrow">Repertorio activo</p>
+        <p class="eyebrow">${iconMascara()}<span>Repertorio activo</span></p>
         <h2>Obras listas para presentarse</h2>
         <p>Contamos con un repertorio versátil que se adapta a diversos espacios, desde grandes teatros hasta patios escolares. Variedad de temáticas: inclusión, migración, diversidad, valores. Formatos flexibles para preescolar, primaria, secundaria y público familiar.</p>
       </div>
@@ -177,6 +179,7 @@ function paginaColectivo() {
       <h1>Colectivo Pies Hinchados: Creación, Inclusión y Movimiento</h1>
       <p class="lede">Fundado en 2017 por Gabriela Pescador y Luis Córdova, el Colectivo Pies Hinchados nace como un laboratorio de creación multidisciplinar en Jalisco. Lo que comenzó como un sueño de llevar el teatro a lugares donde el silencio y la exclusión predominaban, se ha consolidado hoy como una de las compañías más sólidas en el panorama nacional de las artes escénicas para niñas, niños y jóvenes audiencias.</p>
     </div>
+    ${heroFootlights()}
   </section>
 
   <section style="padding-top:0;">
@@ -244,10 +247,11 @@ function paginaRepertorioIndex() {
   const body = `
   <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap">
-      <p class="eyebrow">Repertorio</p>
+      <p class="eyebrow">${iconMascara()}<span>Repertorio</span></p>
       <h1>Obras listas para presentarse</h1>
       <p class="lede">Nuestras producciones no se retiran después del estreno: siguen en repertorio y disponibles para contratar.</p>
     </div>
+    ${heroFootlights()}
   </section>
   <section style="padding-top:0;">
     <div class="wrap"><div class="grid grid-3">${obras.map(tarjetaObra).join('')}</div></div>
@@ -267,7 +271,7 @@ function paginaObra(obra) {
   const body = `
   <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap">
-      <p class="eyebrow">Repertorio</p>
+      <p class="eyebrow">${iconMascara()}<span>Repertorio</span></p>
       <h1>${obra.titulo}</h1>
       ${obra.subtitulo ? `<p class="lede">${obra.subtitulo}</p>` : ''}
       <div class="tag-row" style="margin-top:1.2rem;">
@@ -280,6 +284,7 @@ function paginaObra(obra) {
         ${obra.dosierUrl ? `<a class="btn btn-outline" href="${obra.dosierUrl}">Descargar dosier</a>` : ''}
       </div>
     </div>
+    ${heroFootlights()}
   </section>
 
   ${obra.imagenUrl ? `
@@ -301,7 +306,7 @@ function paginaObra(obra) {
   ${funcionesDeObra.length > 0 ? `
   <section>
     <div class="wrap">
-      <div class="section-head"><p class="eyebrow">Agenda</p><h2>Próximas funciones de esta obra</h2></div>
+      <div class="section-head"><p class="eyebrow">${iconBoleto()}<span>Agenda</span></p><h2>Próximas funciones de esta obra</h2></div>
       <div class="grid grid-2">${funcionesDeObra.map(tarjetaFuncion).join('')}</div>
     </div>
   </section>` : ''}`;
@@ -324,6 +329,7 @@ function paginaInstituciones() {
       <h1>Todo lo que necesitas saber para contratarnos</h1>
       <p class="lede">Con base en Zapopan, Jalisco, contamos con servicio a toda la República Mexicana: escuelas, festivales culturales y municipios de Guadalajara, otros estados y todo el país. Esto es lo que suele preguntarnos quien organiza la contratación.</p>
     </div>
+    ${heroFootlights()}
   </section>
 
   <section class="tinted">
@@ -368,10 +374,11 @@ function paginaTemporadasIndex() {
   const body = `
   <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap">
-      <p class="eyebrow">Agenda</p>
+      <p class="eyebrow">${iconBoleto()}<span>Agenda</span></p>
       <h1>Próximas funciones</h1>
       <p class="lede">Cada función tiene su propia página, con fecha, sede y enlace para boletos cuando aplica.</p>
     </div>
+    ${heroFootlights()}
   </section>
   <section style="padding-top:0;">
     <div class="wrap">
@@ -416,6 +423,7 @@ function paginaFuncion(f) {
         <a class="btn btn-outline" href="/repertorio/${obra.slug}/">Ver ficha de la obra</a>
       </div>` : ''}
     </div>
+    ${heroFootlights()}
   </section>
   <section class="tinted"><div class="wrap prose">${f.resumenHtml}</div></section>`;
 
@@ -434,7 +442,8 @@ function paginaBlogIndex() {
   const posts = [...blog].sort((a, b) => b.fecha.localeCompare(a.fecha));
   const body = `
   <section class="hero" style="padding-bottom:2rem;">
-    <div class="wrap"><p class="eyebrow">Noticias</p><h1>Lo último del colectivo</h1><p class="lede">Convocatorias ganadas, temporadas nuevas y prensa.</p></div>
+    <div class="wrap"><p class="eyebrow">${iconDestello()}<span>Noticias</span></p><h1>Lo último del colectivo</h1><p class="lede">Convocatorias ganadas, temporadas nuevas y prensa.</p></div>
+    ${heroFootlights()}
   </section>
   <section style="padding-top:0;">
     <div class="wrap"><div class="grid grid-2">
@@ -468,6 +477,7 @@ function paginaPost(post) {
   const body = `
   <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap prose"><p class="eyebrow">${fechaLarga(post.fecha)}</p><h1>${post.titulo}</h1></div>
+    ${heroFootlights()}
   </section>
   <section class="tinted"><div class="wrap prose">${post.contenidoHtml}</div></section>`;
 
@@ -484,8 +494,9 @@ function paginaPost(post) {
 // ================= CONTACTO =================
 function paginaContacto() {
   const body = `
-  <section class="hero" style="padding-bottom:1.5rem;">
+  <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap"><p class="eyebrow">Contacto</p><h1>Cuéntanos qué necesitas</h1><p class="lede">Responde este formulario o escríbenos directo por WhatsApp — lo que te sea más rápido.</p></div>
+    ${heroFootlights()}
   </section>
   <section style="padding-top:0;">
     <div class="wrap grid grid-2" style="align-items:start;">
