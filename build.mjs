@@ -98,8 +98,8 @@ function paginaInicio() {
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Colectivo de teatro · Zapopan, Jalisco · Servicio a toda la República Mexicana</p>
-      <h1>Teatro de Impacto Social para Niñas, Niños y Jóvenes</h1>
-      <p class="lede">¿Buscas una experiencia cultural inolvidable para tu institución? En Colectivo Pies Hinchados somos especialistas en crear universos escénicos que combinan el juego, la inclusión y la reflexión. Con más de 9 años de trayectoria, llevamos la magia del teatro profesional directamente a tu escuela, centro cultural o festival.</p>
+      <h1>Obras de Teatro para Niñas, Niños y Jóvenes en Guadalajara</h1>
+      <p class="lede">¿Buscas una experiencia cultural inolvidable para tu institución? En Colectivo Pies Hinchados somos especialistas en crear universos escénicos que combinan el juego, la inclusión y la reflexión. Con más de 9 años de trayectoria, llevamos la magia del teatro profesional directamente a tu escuela, centro cultural o festival en Guadalajara, Jalisco y en toda la República Mexicana.</p>
       <p class="lede" style="margin-top:1rem;">Nuestras obras están diseñadas específicamente para audiencias jóvenes, abordando temas fundamentales como la empatía, la neurodivergencia y el manejo de emociones a través de técnicas como el clown, los títeres, la máscara y la Lengua de Señas Mexicana (LSM).</p>
       <div class="cta-row">
         <a class="btn btn-primary" href="/repertorio/">Ver repertorio de obras</a>
@@ -162,8 +162,8 @@ function paginaInicio() {
 
   write('index.html', layout({
     path: '/',
-    title: 'Teatro para escuelas, festivales culturales y municipios en Guadalajara y todo México',
-    description: 'Colectivo Pies Hinchados: teatro de impacto social para niñas, niños y jóvenes, con base en Zapopan, Jalisco y servicio a toda la República Mexicana. Contrata funciones para tu escuela, festival cultural o municipio.',
+    title: 'Obras de teatro para niños en Guadalajara y escuelas de México',
+    description: 'Obras de teatro para niños y jóvenes en Guadalajara, Jalisco, con servicio a toda la República Mexicana. Colectivo Pies Hinchados: teatro de impacto social, inclusión y valores para escuelas, festivales culturales y municipios.',
     bodyHtml: body,
   }));
 }
@@ -233,7 +233,7 @@ function paginaColectivo() {
   write('el-colectivo/index.html', layout({
     path: '/el-colectivo/',
     title: 'El colectivo: quiénes somos',
-    description: 'Colectivo Pies Hinchados (Pies Hinchados Teatro SC): fundado en 2017 por Gabriela Pescador y Luis Córdova en Zapopan, Jalisco. Dos selecciones a la Muestra Nacional de Teatro.',
+    description: 'Colectivo Pies Hinchados (Pies Hinchados Teatro SC): compañía de teatro fundada en 2017 por Gabriela Pescador y Luis Córdova en Zapopan, zona metropolitana de Guadalajara. Dos selecciones a la Muestra Nacional de Teatro.',
     bodyHtml: body,
   }));
 }
@@ -245,8 +245,8 @@ function paginaRepertorioIndex() {
   <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap">
       <p class="eyebrow">Repertorio</p>
-      <h1>Obras listas para presentarse</h1>
-      <p class="lede">Nuestras producciones no se retiran después del estreno: siguen en repertorio y disponibles para contratar.</p>
+      <h1>Obras de teatro para niños y jóvenes, listas para presentarse</h1>
+      <p class="lede">Nuestras producciones no se retiran después del estreno: siguen en repertorio y disponibles para contratar en Guadalajara y toda la República Mexicana.</p>
     </div>
   </section>
   <section style="padding-top:0;">
@@ -255,8 +255,8 @@ function paginaRepertorioIndex() {
 
   write('repertorio/index.html', layout({
     path: '/repertorio/',
-    title: 'Repertorio de obras de teatro para contratar',
-    description: 'Repertorio activo de Colectivo Pies Hinchados: obras de teatro para niñas, niños y jóvenes, listas para contratar en escuelas, festivales culturales y municipios de México.',
+    title: 'Obras de teatro para niños en Guadalajara para contratar',
+    description: 'Obras de teatro para niñas, niños y jóvenes en Guadalajara, listas para contratar en escuelas, festivales culturales y municipios de todo México. Repertorio activo de Colectivo Pies Hinchados.',
     bodyHtml: body,
   }));
 }
@@ -357,8 +357,8 @@ function paginaInstituciones() {
 
   write('escuelas-festivales-municipios/index.html', layout({
     path: '/escuelas-festivales-municipios/',
-    title: 'Teatro para escuelas, festivales culturales y municipios',
-    description: 'Contrata teatro para tu escuela, festival cultural o municipio: repertorio inclusivo para niñas, niños y jóvenes, con ficha técnica, requisitos de espacio y proceso de cotización claro.',
+    title: 'Contratar teatro para escuelas y festivales en Guadalajara',
+    description: 'Contrata teatro para tu escuela, festival cultural o municipio en Guadalajara y toda la República Mexicana: repertorio inclusivo para niñas, niños y jóvenes, con ficha técnica y proceso de cotización claro.',
     bodyHtml: body,
   }));
 }
@@ -389,8 +389,8 @@ function paginaTemporadasIndex() {
 
   write('temporadas/index.html', layout({
     path: '/temporadas/',
-    title: 'Próximas funciones y temporadas',
-    description: 'Calendario de próximas funciones de Colectivo Pies Hinchados: fechas, sedes y ciudades donde puedes ver o programar nuestras obras de teatro.',
+    title: 'Próximas funciones de teatro para niños en Guadalajara y México',
+    description: 'Calendario de próximas funciones de teatro para niños de Colectivo Pies Hinchados en Guadalajara y otras ciudades de México: fechas, sedes y boletos.',
     bodyHtml: body,
   }));
 }
