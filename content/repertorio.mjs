@@ -77,7 +77,7 @@ export const repertorio = [
     destacada: true,
     orden: 2,
     gradiente: 'grad-2',
-    metaDescripcion: 'Roto, un juego sobre el cuerpo que resiste: obra de teatro inclusivo de Colectivo Pies Hinchados para escuelas y festivales, con apoyo de la Secretaría de Cultura Jalisco. Próximo estreno.',
+    metaDescripcion: 'Roto, un juego sobre el cuerpo que resiste: obra de teatro inclusivo de Colectivo Pies Hinchados, compañía con base en Guadalajara, para escuelas y festivales. Con apoyo de la Secretaría de Cultura Jalisco. Próximo estreno.',
   },
   {
     slug: 'tina-y-tomas',
@@ -105,7 +105,7 @@ export const repertorio = [
     destacada: true,
     orden: 3,
     gradiente: 'grad-3',
-    metaDescripcion: 'Tina y Tomás: obra de clown, títeres y pantomima de Colectivo Pies Hinchados para niñas y niños, con funciones en noviembre de 2026 gracias a Habita la Escena.',
+    metaDescripcion: 'Tina y Tomás: obra de teatro infantil de clown, títeres y pantomima de Colectivo Pies Hinchados, con funciones en Guadalajara en noviembre de 2026 gracias a Habita la Escena.',
   },
   {
     slug: 'que-dificil-ser-un-monstruo',
@@ -158,7 +158,7 @@ export const repertorio = [
     destacada: false,
     orden: 5,
     gradiente: 'grad-2',
-    metaDescripcion: 'Armadillos, un viaje hacia el otro lado: obra de teatro sobre migración y resistencia de Colectivo Pies Hinchados, con clown y teatro de objetos, para escuelas y festivales.',
+    metaDescripcion: 'Armadillos, un viaje hacia el otro lado: obra de teatro sobre migración y resistencia de Colectivo Pies Hinchados (Guadalajara), con clown y teatro de objetos, para escuelas y festivales de todo México.',
   },
   {
     slug: 'legatus-y-dimittas',
@@ -185,7 +185,7 @@ export const repertorio = [
     destacada: false,
     orden: 6,
     gradiente: 'grad-3',
-    metaDescripcion: 'Legatus y Dimittas: obra de teatro poético con máscaras de Colectivo Pies Hinchados sobre la herencia y el arte de dejar ir, para festivales culturales.',
+    metaDescripcion: 'Legatus y Dimittas: obra de teatro poético con máscaras de Colectivo Pies Hinchados (Guadalajara) sobre la herencia y el arte de dejar ir, para festivales culturales.',
   },
   {
     slug: 'raro',
@@ -210,7 +210,7 @@ export const repertorio = [
     destacada: false,
     orden: 7,
     gradiente: 'grad-1',
-    metaDescripcion: 'Raro: Una mirada desde lo invisible — obra de teatro galardonada de Colectivo Pies Hinchados, con Lengua de Señas Mexicana, sobre diversidad e inclusión.',
+    metaDescripcion: 'Raro: Una mirada desde lo invisible — obra de teatro galardonada de Colectivo Pies Hinchados en Guadalajara, con Lengua de Señas Mexicana, sobre diversidad e inclusión.',
   },
   {
     slug: 'no-oigo-nada',
@@ -237,7 +237,7 @@ export const repertorio = [
     destacada: false,
     orden: 8,
     gradiente: 'grad-2',
-    metaDescripcion: 'No oigo nada soy de palo tengo orejas de pescado: obra de teatro inclusivo sobre comunicación no verbal de Colectivo Pies Hinchados, para escuelas.',
+    metaDescripcion: 'No oigo nada soy de palo tengo orejas de pescado: obra de teatro infantil inclusivo sobre comunicación no verbal de Colectivo Pies Hinchados en Guadalajara, para escuelas.',
   },
   {
     slug: 'rompamos-la-burbuja',
@@ -264,7 +264,7 @@ export const repertorio = [
     destacada: false,
     orden: 9,
     gradiente: 'grad-3',
-    metaDescripcion: 'Rompamos la burbuja: obra de teatro sin etiquetas de Colectivo Pies Hinchados, con objetos y títeres, sobre diversidad e inclusión, para escuelas y festivales.',
+    metaDescripcion: 'Rompamos la burbuja: obra de teatro sin etiquetas de Colectivo Pies Hinchados en Guadalajara, con objetos y títeres, sobre diversidad e inclusión, para escuelas y festivales.',
   },
   {
     slug: 'la-luz-que-causa-una-bala',
@@ -290,7 +290,7 @@ export const repertorio = [
     destacada: false,
     orden: 10,
     gradiente: 'grad-1',
-    metaDescripcion: 'La luz que causa una bala: pieza de teatro físico de Colectivo Pies Hinchados sobre memoria y resiliencia frente a la violencia, para festivales culturales.',
+    metaDescripcion: 'La luz que causa una bala: pieza de teatro físico de Colectivo Pies Hinchados en Guadalajara sobre memoria y resiliencia frente a la violencia, para festivales culturales.',
   },
   {
     slug: 'evasaurio',
@@ -317,6 +317,6 @@ export const repertorio = [
     destacada: false,
     orden: 11,
     gradiente: 'grad-2',
-    metaDescripcion: 'Evasaurio, todos tenemos cola que nos pisen: obra de teatro en Lengua de Señas Mexicana de Colectivo Pies Hinchados sobre identidad y diversidad, para preescolar.',
+    metaDescripcion: 'Evasaurio, todos tenemos cola que nos pisen: obra de teatro infantil en Lengua de Señas Mexicana de Colectivo Pies Hinchados en Guadalajara sobre identidad y diversidad, para preescolar.',
   },
 ];
