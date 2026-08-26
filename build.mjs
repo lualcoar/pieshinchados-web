@@ -465,10 +465,20 @@ function paginaPost(post) {
     datePublished: post.fecha,
     author: { '@type': 'Organization', name: 'Colectivo Pies Hinchados' },
   };
+  if (post.imagenUrl) jsonLd.image = SITE_URL + post.imagenUrl;
   const body = `
   <section class="hero" style="padding-bottom:2rem;">
     <div class="wrap prose"><p class="eyebrow">${fechaLarga(post.fecha)}</p><h1>${post.titulo}</h1></div>
   </section>
+  ${post.imagenUrl ? `
+  <section style="padding-top:0;">
+    <div class="wrap prose">
+      <figure style="margin:0; border-top:3px solid var(--ink); border-bottom:1px solid var(--line); padding:1.2rem 0;">
+        <img src="${post.imagenUrl}" alt="${post.imagenAlt}" style="display:block; width:100%; border-radius:var(--radius-sm); box-shadow:var(--shadow-md);" loading="lazy" />
+        ${post.imagenCaption ? `<figcaption style="margin-top:0.7rem; font-family:'IBM Plex Mono'; font-size:0.72rem; letter-spacing:0.02em; color:var(--ink-soft); line-height:1.5;">${post.imagenCaption}</figcaption>` : ''}
+      </figure>
+    </div>
+  </section>` : ''}
   <section class="tinted"><div class="wrap prose">${post.contenidoHtml}</div></section>`;
 
   write(`blog/${post.slug}/index.html`, layout({
@@ -478,6 +488,7 @@ function paginaPost(post) {
     bodyHtml: body,
     jsonLd,
     ogType: 'article',
+    ogImage: post.imagenUrl,
   }));
 }
 
