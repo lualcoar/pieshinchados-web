@@ -8,6 +8,23 @@
 // ============================================================
 export const funciones = [
   {
+    slug: 'legatus-y-dimittas-muestra-estatal-teatro-jalisco-agosto-2026',
+    obraSlug: 'legatus-y-dimittas',
+    fechaInicio: '2026-08-29',
+    fechaFin: '',
+    horario: '6:00 pm',
+    lugar: 'Foro de Arte y Cultura',
+    ciudad: 'Guadalajara',
+    estado: 'Jalisco',
+    boletosUrl: 'https://voyalteatro.com/cartelera/9100',
+    gratuita: false,
+    resumenHtml: `<p>Función de <em>Legatus y Dimittas</em> el sábado 29 de agosto de 2026, a las 6:00 pm, en
+      el Foro de Arte y Cultura (Fray Antonio Alcalde 1451, Col. Miraflores, Guadalajara), como parte de la
+      <a href="/blog/legatus-y-dimittas-muestra-estatal-teatro-jalisco-2026/">29ª Muestra Estatal de Teatro de
+      Jalisco 2026</a>. <a href="https://voyalteatro.com/cartelera/9100" target="_blank" rel="noopener">Boletos
+      en línea aquí</a>.</p>`,
+  },
+  {
     slug: 'armadillos-conjunto-santander-octubre-2026',
     obraSlug: 'armadillos',
     fechaInicio: '2026-10-03',

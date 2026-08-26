@@ -6,6 +6,56 @@
 // ============================================================
 export const blog = [
   {
+    slug: 'legatus-y-dimittas-muestra-estatal-teatro-jalisco-2026',
+    titulo: 'Legatus y Dimittas se presenta en la Muestra Estatal de Teatro de Jalisco 2026',
+    fecha: '2026-08-26',
+    resumen: 'Este sábado 29 de agosto presentamos Legatus y Dimittas en el Foro de Arte y Cultura de Guadalajara, como parte de la 29ª Muestra Estatal de Teatro de Jalisco 2026.',
+    metaDescripcion: 'Colectivo Pies Hinchados presenta Legatus y Dimittas el sábado 29 de agosto, 6:00 pm, en el Foro de Arte y Cultura de Guadalajara, dentro de la 29ª Muestra Estatal de Teatro de Jalisco 2026.',
+    imagenUrl: '/assets/obra-legatus-y-dimittas.jpg',
+    imagenAlt: 'Personaje de payaso de circo montado en caballito de juguete en la obra Legatus y Dimittas — Colectivo Pies Hinchados',
+    imagenCaption: 'LEGATUS Y DIMITTAS · Colectivo Pies Hinchados se presenta el sábado 29 de agosto en el Foro de Arte y Cultura, Guadalajara. Foto: archivo del colectivo.',
+    contenidoHtml: `
+      <p>Colectivo Pies Hinchados se presenta este <strong>sábado 29 de agosto</strong> en el
+      <strong>Foro de Arte y Cultura</strong> de Guadalajara, como parte de la
+      <strong>29ª Muestra Estatal de Teatro de Jalisco 2026</strong>, la selección que organiza cada año la
+      Secretaría de Cultura de Jalisco junto con el Fideicomiso Fondo Estatal para la Cultura y las Artes
+      (FEFCA) para reunir y difundir lo más destacado de las artes escénicas del estado.</p>
+
+      <p>La función será <strong>Legatus y Dimittas</strong>, nuestra pieza de clown, teatro físico y
+      animación de objetos sobre la última generación de una dinastía de payasos, que explora el peso de la
+      herencia y el arte de soltar para encontrar la propia voz.</p>
+
+      <h2>¿Cuándo y dónde?</h2>
+      <ul>
+        <li><strong>Obra:</strong> <a href="/repertorio/legatus-y-dimittas/">Legatus y Dimittas</a></li>
+        <li><strong>Fecha:</strong> sábado 29 de agosto de 2026</li>
+        <li><strong>Hora:</strong> 6:00 pm</li>
+        <li><strong>Sede:</strong> Foro de Arte y Cultura — Fray Antonio Alcalde 1451, Col. Miraflores,
+        Guadalajara, Jalisco</li>
+        <li><strong>Boletos:</strong> <a href="https://voyalteatro.com/cartelera/9100" target="_blank" rel="noopener">disponibles en línea aquí</a></li>
+      </ul>
+
+      <h2>Sobre la obra</h2>
+      <p>¿Qué sucede cuando el telón cae por última vez sobre una tradición familiar? Legatus y Dimittas nos
+      sumerge en el universo de la última generación de una dinastía de payasos: entre baúles polvorientos,
+      maletas cargadas de recuerdos y narices rojas que parecen haber perdido su brillo, dos personajes
+      enfrentan el inevitable ocaso de su era. A través de un lenguaje físico cargado de ternura y humor
+      melancólico, la obra cautiva tanto a los más pequeños como a los adultos.</p>
+
+      <h2>Sobre la Muestra Estatal de Teatro de Jalisco</h2>
+      <p>La Muestra Estatal de Teatro llega este año a su edición 29 y se lleva a cabo del 21 al 29 de agosto
+      de 2026 en distintas sedes del estado. Ser parte de esta selección es un reconocimiento más a la
+      trayectoria del colectivo, que ya ha sido convocado en dos ocasiones a la Muestra Nacional de Teatro
+      (MNT) y cuenta con el respaldo de instituciones como el INBAL, la Secretaría de Cultura Jalisco, Habita
+      la Escena y Cultura Guadalajara.</p>
+
+      <p>Te esperamos el sábado en el Foro de Arte y Cultura — comparte esta nota con quien creas que le
+      encantaría acompañarnos. Si tu escuela, festival o municipio quiere presentar Legatus y Dimittas u otra
+      obra de nuestro repertorio, escríbenos por nuestro <a href="/contacto/">formulario de contacto</a> o por
+      <a href="https://wa.me/523311774497" target="_blank" rel="noopener">WhatsApp</a>.</p>
+    `,
+  },
+  {
     slug: 'como-contratar-obra-de-teatro-escuela-guadalajara',
     titulo: 'Cómo contratar una obra de teatro para tu escuela en Guadalajara: guía paso a paso',
     fecha: '2026-08-26',
