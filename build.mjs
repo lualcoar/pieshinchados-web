@@ -37,21 +37,30 @@ const pasadas = [...funcionesOrdenadas].filter((f) => f.fechaInicio < hoy).rever
 
 function eventJsonLd(f) {
   const obra = obraPorSlug(f.obraSlug);
+  const rango = f.fechaFin ? `del ${fechaLarga(f.fechaInicio)} al ${fechaLarga(f.fechaFin)}` : `el ${fechaLarga(f.fechaInicio)}`;
   const json = {
     '@context': 'https://schema.org',
     '@type': 'TheaterEvent',
     name: obra.titulo,
+    description: `Función de ${obra.titulo}, de Colectivo Pies Hinchados, ${rango} en ${f.lugar}, ${f.ciudad}, ${f.estado}.`,
     startDate: f.fechaInicio,
+    eventStatus: 'https://schema.org/EventScheduled',
     location: {
       '@type': 'Place',
       name: f.lugar,
       address: { '@type': 'PostalAddress', addressLocality: f.ciudad, addressRegion: f.estado, addressCountry: 'MX' },
     },
     performer: { '@type': 'PerformingGroup', name: 'Colectivo Pies Hinchados' },
+    organizer: { '@type': 'Organization', name: 'Colectivo Pies Hinchados', url: SITE_URL },
   };
+  if (obra.imagenUrl) json.image = SITE_URL + obra.imagenUrl;
   if (f.fechaFin) json.endDate = f.fechaFin;
-  if (f.boletosUrl) json.offers = { '@type': 'Offer', url: f.boletosUrl, availability: 'https://schema.org/InStock' };
-  else if (f.gratuita) json.isAccessibleForFree = true;
+  if (f.gratuita) {
+    json.isAccessibleForFree = true;
+    json.offers = { '@type': 'Offer', url: SITE_URL + `/temporadas/${f.slug}/`, availability: 'https://schema.org/InStock', price: '0', priceCurrency: 'MXN' };
+  } else {
+    json.offers = { '@type': 'Offer', url: f.boletosUrl || (SITE_URL + `/temporadas/${f.slug}/`), availability: 'https://schema.org/InStock' };
+  }
   return json;
 }
 
