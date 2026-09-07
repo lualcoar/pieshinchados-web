@@ -50,7 +50,7 @@ export const funciones = [
     lugar: 'Casa Caracol',
     ciudad: 'Colima',
     estado: 'Colima',
-    boletosUrl: '/circuito-nacional-boletos/#colima',
+    boletosUrl: '/cnaeei/#colima',
     gratuita: false,
     resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el sábado 10 de
       octubre (7:00 pm) y el domingo 11 de octubre (6:00 pm) de 2026, en Casa Caracol.</p>
@@ -66,7 +66,7 @@ export const funciones = [
     lugar: 'La Ceiba',
     ciudad: 'Morelia',
     estado: 'Michoacán',
-    boletosUrl: '/circuito-nacional-boletos/#morelia',
+    boletosUrl: '/cnaeei/#morelia',
     gratuita: false,
     resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el domingo 18 de
       octubre de 2026, a la 1:00 pm y a las 6:00 pm, en La Ceiba.</p>
@@ -82,7 +82,7 @@ export const funciones = [
     lugar: 'Espacio Colaborativo',
     ciudad: 'León',
     estado: 'Guanajuato',
-    boletosUrl: '/circuito-nacional-boletos/#leon',
+    boletosUrl: '/cnaeei/#leon',
     gratuita: false,
     resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el lunes 7 y
       martes 8 de diciembre de 2026, a las 7:00 pm, en Espacio Colaborativo.</p>
@@ -98,7 +98,7 @@ export const funciones = [
     lugar: 'Plataforma 322',
     ciudad: 'Puerto Vallarta',
     estado: 'Jalisco',
-    boletosUrl: '/circuito-nacional-boletos/#puerto-vallarta',
+    boletosUrl: '/cnaeei/#puerto-vallarta',
     gratuita: false,
     resumenHtml: `<p>Funciones de <em>Armadillos, un viaje hacia el otro lado</em> el viernes 11 y
       sábado 12 de diciembre de 2026, a las 6:00 pm, en Plataforma 322.</p>

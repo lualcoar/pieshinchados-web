@@ -180,7 +180,7 @@ export const blog = [
       </ul>
 
       <p>¿Quieres ir a alguna de estas funciones? Cada sede administra su propia taquilla, así
-      que puedes <a href="/circuito-nacional-boletos/"><strong>apartar tus boletos aquí</strong></a>
+      que puedes <a href="/cnaeei/"><strong>apartar tus boletos aquí</strong></a>
       — el pago se hace directamente en el espacio, el día de la función.</p>
 
       <p>Si tienes una escuela, festival cultural o espacio en alguna de estas ciudades y
