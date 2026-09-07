@@ -424,7 +424,7 @@ function paginaFuncion(f) {
       </div>
       ${esProxima ? `
       <div class="cta-row">
-        ${f.boletosUrl ? `<a class="btn btn-primary" href="${f.boletosUrl}" target="_blank" rel="noopener">Comprar boletos</a>` : `<a class="btn btn-primary" href="/contacto/">Más información</a>`}
+        ${f.boletosUrl ? (f.boletosUrl.startsWith('/') ? `<a class="btn btn-primary" href="${f.boletosUrl}">Apartar boletos</a>` : `<a class="btn btn-primary" href="${f.boletosUrl}" target="_blank" rel="noopener">Comprar boletos</a>`) : `<a class="btn btn-primary" href="/contacto/">Más información</a>`}
         <a class="btn btn-outline" href="/repertorio/${obra.slug}/">Ver ficha de la obra</a>
       </div>` : ''}
     </div>
@@ -501,6 +501,105 @@ function paginaPost(post) {
     jsonLd,
     ogType: 'article',
     ogImage: post.imagenUrl,
+  }));
+}
+
+// ================= BOLETOS: CIRCUITO NACIONAL =================
+function paginaBoletosCircuito() {
+  const ciudades = [
+    {
+      id: 'colima', ciudad: 'Colima', lugar: 'Casa Caracol', estado: 'Colima', precio: 150,
+      fechas: ['Sábado 10 de octubre, 7:00 pm', 'Domingo 11 de octubre, 6:00 pm'],
+    },
+    {
+      id: 'morelia', ciudad: 'Morelia', lugar: 'La Ceiba, Foro Teatral', estado: 'Michoacán', precio: 100,
+      fechas: ['Domingo 18 de octubre, 1:00 pm', 'Domingo 18 de octubre, 6:00 pm'],
+    },
+    {
+      id: 'leon', ciudad: 'León', lugar: 'Espacio Colaborativo', estado: 'Guanajuato', precio: 100,
+      fechas: ['Lunes 7 de diciembre, 7:00 pm', 'Martes 8 de diciembre, 7:00 pm'],
+    },
+    {
+      id: 'puerto-vallarta', ciudad: 'Puerto Vallarta', lugar: 'Plataforma 322', estado: 'Jalisco', precio: 100,
+      fechas: ['Viernes 11 de diciembre, 6:00 pm', 'Sábado 12 de diciembre, 6:00 pm'],
+    },
+  ];
+
+  const tarjetasCiudad = ciudades.map((c) => `
+    <div class="card" id="${c.id}" style="padding:1.6rem; scroll-margin-top:5rem;">
+      <p class="eyebrow" style="margin-bottom:0.4rem;">${c.ciudad}, ${c.estado}</p>
+      <h3 style="font-size:1.1rem; margin-bottom:0.5rem;">${c.lugar}</h3>
+      <p style="color:var(--ink-soft); font-size:0.9rem; margin-bottom:0.2rem;">${c.fechas.join(' · ')}</p>
+      <p style="font-family:'Lato'; font-weight:700; color:var(--coral-ink); margin-top:0.6rem;">Boleto: $${c.precio} MXN</p>
+    </div>`).join('');
+
+  const opciones = ciudades.map((c) => `
+      <optgroup label="${c.ciudad} · ${c.lugar} · $${c.precio}">
+        ${c.fechas.map((f) => `<option value="${c.ciudad} – ${c.lugar} – ${f}">${f}</option>`).join('\n        ')}
+      </optgroup>`).join('');
+
+  const body = `
+  <div class="poster-hero">
+    <div class="poster-hero-bg">
+      <img src="/assets/circuito-nacional-armadillos.jpg" alt="Elenco de Armadillos, un viaje hacia el otro lado, con vestuario de tela y máscaras, en plena función sobre el escenario" loading="eager" />
+      <div class="poster-hero-overlay">
+        <div class="wrap poster-hero-content">
+          <p class="eyebrow">Circuito Nacional de Artes Escénicas · Gira 2026</p>
+          <h1>Aparta tus boletos — Armadillos, un viaje hacia el otro lado</h1>
+          <p class="lede">Presentamos esta obra en cuatro espacios independientes de México como parte del <a href="/blog/circuito-nacional-artes-escenicas-espacios-independientes-2026/" style="color:#fff; text-decoration-color:rgba(255,255,255,0.55);">Circuito Nacional de Artes Escénicas en Espacios Independientes 2026</a>. Cada sede administra su propia taquilla, así que aquí solo apartamos tu lugar — el pago se hace al llegar a la función.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#ciudades">Ver fechas y apartar boletos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="ciudades">
+    <div class="wrap">
+      <div class="grid grid-2">${tarjetasCiudad}</div>
+    </div>
+  </section>
+
+  <section class="tinted">
+    <div class="wrap" style="max-width:34rem;">
+      <div class="section-head" style="margin-bottom:1.4rem;">
+        <p class="eyebrow">Apartar lugar</p>
+        <h2>Este formulario no cobra nada</h2>
+        <p>Llénalo y te confirmamos por WhatsApp. Pagas tus boletos directamente en la sede el día de la función.</p>
+      </div>
+      <!--
+        Formulario de Netlify Forms (igual que el de /contacto/): se
+        detecta automáticamente al desplegar por data-netlify="true" y
+        name="reserva-circuito-nacional". Para recibir aviso por correo
+        cada vez que alguien lo llena, actívalo en Netlify → Site
+        configuration → Forms → Form notifications.
+      -->
+      <form class="form-card" name="reserva-circuito-nacional" method="POST" data-netlify="true" netlify-honeypot="empresa-web">
+        <input type="hidden" name="form-name" value="reserva-circuito-nacional" />
+        <p style="display:none;"><label>No llenes esto: <input name="empresa-web" /></label></p>
+        <div class="field">
+          <label for="funcion">¿A qué función quieres ir?</label>
+          <select id="funcion" name="funcion" required>
+            <option value="">Elige una función</option>
+            ${opciones}
+          </select>
+        </div>
+        <div class="field"><label for="cantidad">Número de boletos</label><input id="cantidad" name="cantidad" type="number" min="1" max="10" value="1" required /></div>
+        <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" required /></div>
+        <div class="field"><label for="whatsapp">WhatsApp</label><input id="whatsapp" name="whatsapp" type="tel" required placeholder="10 dígitos" /></div>
+        <div class="field"><label for="email">Correo (opcional)</label><input id="email" name="email" type="email" /></div>
+        <button class="btn btn-primary" type="submit" style="width:100%; justify-content:center;">Apartar boletos</button>
+        <p style="color:var(--ink-faint); font-size:0.82rem; margin-top:0.8rem;">Al enviar este formulario no se realiza ningún cargo. Solo aparta tu lugar; el pago es en taquilla, el día de la función.</p>
+      </form>
+    </div>
+  </section>`;
+
+  write('circuito-nacional-boletos/index.html', layout({
+    path: '/circuito-nacional-boletos/',
+    title: 'Aparta tus boletos — Circuito Nacional de Artes Escénicas 2026',
+    description: 'Aparta tu lugar para las funciones de Armadillos, un viaje hacia el otro lado en Colima, Morelia, León y Puerto Vallarta, dentro del Circuito Nacional de Artes Escénicas en Espacios Independientes 2026. El pago se realiza en taquilla.',
+    bodyHtml: body,
   }));
 }
 
@@ -604,11 +703,12 @@ funciones.forEach(paginaFuncion);
 paginaBlogIndex();
 blog.forEach(paginaPost);
 paginaContacto();
+paginaBoletosCircuito();
 pagina404();
 copiarAssets();
 
 const rutas = [
-  '/', '/el-colectivo/', '/repertorio/', '/escuelas-festivales-municipios/', '/temporadas/', '/blog/', '/contacto/',
+  '/', '/el-colectivo/', '/repertorio/', '/escuelas-festivales-municipios/', '/temporadas/', '/blog/', '/contacto/', '/circuito-nacional-boletos/',
   ...repertorio.map((o) => `/repertorio/${o.slug}/`),
   ...funciones.map((f) => `/temporadas/${f.slug}/`),
   ...blog.map((p) => `/blog/${p.slug}/`),
