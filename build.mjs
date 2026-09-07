@@ -104,6 +104,9 @@ function tarjetaFuncion(f) {
 function paginaInicio() {
   const destacadas = [...repertorio].sort((a, b) => a.orden - b.orden).slice(0, 3);
   const body = `
+  <div class="hero-banner">
+    <img src="/assets/hero-titere-monstruo.jpg" alt="Títere de Colectivo Pies Hinchados leyendo un libro de cuentos sobre un escenario teatral" loading="eager" />
+  </div>
   <section class="hero">
     <div class="wrap">
       <p class="eyebrow">Colectivo de teatro · Zapopan, Jalisco · Servicio a toda la República Mexicana</p>
