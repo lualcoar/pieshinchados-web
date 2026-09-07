@@ -179,6 +179,10 @@ export const blog = [
         <li>Sábado 12 de diciembre, 6:00 pm</li>
       </ul>
 
+      <p>¿Quieres ir a alguna de estas funciones? Cada sede administra su propia taquilla, así
+      que puedes <a href="/circuito-nacional-boletos/"><strong>apartar tus boletos aquí</strong></a>
+      — el pago se hace directamente en el espacio, el día de la función.</p>
+
       <p>Si tienes una escuela, festival cultural o espacio en alguna de estas ciudades y
       quieres sumarte a estas fechas o agendar una función adicional, <a href="/contacto/">contáctanos
       aquí</a> o escríbenos por WhatsApp — nos encantaría coordinar contigo.</p>
