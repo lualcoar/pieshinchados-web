@@ -118,6 +118,14 @@ nav.main-nav a:hover, nav.main-nav a[aria-current="page"]{ color:var(--coral-ink
 .hero h1{ font-size:clamp(2.2rem,5vw,3.4rem); max-width:26ch; }
 .hero p.lede{ font-size:1.15rem; color:var(--ink-soft); max-width:38rem; margin-top:1.1rem; }
 .hero .cta-row{ display:flex; gap:0.8rem; flex-wrap:wrap; margin-top:1.8rem; }
+.hero-banner{ width:100%; line-height:0; }
+.hero-banner img{
+  display:block; width:100%; height:auto;
+  aspect-ratio:3/1; object-fit:cover; object-position:64% 24%;
+}
+@media (max-width:640px){
+  .hero-banner img{ aspect-ratio:4/3; object-position:62% 22%; }
+}
 
 /* ---------- sections ---------- */
 section{ padding:3.5rem 0; }
