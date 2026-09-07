@@ -595,8 +595,8 @@ function paginaBoletosCircuito() {
     </div>
   </section>`;
 
-  write('circuito-nacional-boletos/index.html', layout({
-    path: '/circuito-nacional-boletos/',
+  write('cnaeei/index.html', layout({
+    path: '/cnaeei/',
     title: 'Aparta tus boletos — Circuito Nacional de Artes Escénicas 2026',
     description: 'Aparta tu lugar para las funciones de Armadillos, un viaje hacia el otro lado en Colima, Morelia, León y Puerto Vallarta, dentro del Circuito Nacional de Artes Escénicas en Espacios Independientes 2026. El pago se realiza en taquilla.',
     bodyHtml: body,
@@ -680,7 +680,7 @@ function copiarAssets() {
   const publicDir = join(__dirname, 'public');
   const outDir = join(DIST, 'assets');
   mkdirSync(outDir, { recursive: true });
-  const rootFiles = new Set(['robots.txt', 'favicon.png', 'apple-touch-icon.png']);
+  const rootFiles = new Set(['robots.txt', 'favicon.png', 'apple-touch-icon.png', '_redirects']);
   for (const file of readdirSync(publicDir)) {
     if (rootFiles.has(file)) {
       copyFileSync(join(publicDir, file), join(DIST, file));
@@ -708,7 +708,7 @@ pagina404();
 copiarAssets();
 
 const rutas = [
-  '/', '/el-colectivo/', '/repertorio/', '/escuelas-festivales-municipios/', '/temporadas/', '/blog/', '/contacto/', '/circuito-nacional-boletos/',
+  '/', '/el-colectivo/', '/repertorio/', '/escuelas-festivales-municipios/', '/temporadas/', '/blog/', '/contacto/', '/cnaeei/',
   ...repertorio.map((o) => `/repertorio/${o.slug}/`),
   ...funciones.map((f) => `/temporadas/${f.slug}/`),
   ...blog.map((p) => `/blog/${p.slug}/`),
